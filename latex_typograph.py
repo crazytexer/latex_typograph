@@ -30,6 +30,9 @@ def typograph(text: str):
 
     # Reference commands:
     ref = 'cite|eqref|ref|pageref'
+    # If your citation is something like [Wang, 2020] but not [1],
+    # then the NBSP before it may be unnecessary
+    # so you may want to remove 'cite|' from ref in line 32.
 
     # Replace the space characters with NBSP
     # between the following characters and a reference:
