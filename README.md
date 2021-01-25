@@ -27,7 +27,7 @@ In LaTeX documents, the Python script `latex_typograph.py` replaces the spaces a
 
 4. The NBSP is inserted instead of the space characters between **(a)**&nbsp;a&nbsp;Latin letter (`a`...`z`, `A`...`Z`), a&nbsp;digit (`0`...`9`), the&nbsp;closing quote `'` (and `''`), the percent sign in LaTeX&nbsp;`\%` (but not the comment `%`), the dollar sign&nbsp;`$` (which means both USD&nbsp;`\$` and the end of inline equation&nbsp;`$...$`), a&nbsp;closing bracket (`)`, `]`, and&nbsp;`}`; the latter means both the bracket itself&nbsp;`\}` and the end of&nbsp;`\command{...}`) and **(b)**&nbsp;a&nbsp;reference command (`\cite{...}`, `\eqref{...}`, `\ref{...}`, and `\pageref{...}`).
 
-5. Note that this script is supposed to be used if citations appear as&nbsp;[1]. If it is something like [Wang, 2020], then the NBSP before it may be unnecessary but the script does not care about it. In such cases, you may want to remove `cite` from line&nbsp;32 (`ref = 'cite|eqref|ref|pageref'`).
+5. Note that this script is supposed to be used if citations appear as&nbsp;[1]. If it is something like [Wang, 2020], then the NBSP before it may be unnecessary but the script does not care about it. In such cases, you may want to remove `cite|` from line&nbsp;32 (`ref = 'cite|eqref|ref|pageref'`).
 
 6. Generally no changes are made if a&nbsp;reference command is preceded by **(a)**&nbsp;a&nbsp;punctuation mark (`.,:;?!`) and **(b)**&nbsp;the space characters because the mark and the reference belong to logically different segments. The same goes for a&nbsp;preceding sentence in brackets or quotation marks (i.e., which ends with `.)`, `?)`, `!)`, `.]`, `?]`, `!]`, `.'`, `?'`, `!'`, `.''`, `?''`, or `!''`).
 
