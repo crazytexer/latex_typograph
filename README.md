@@ -30,8 +30,7 @@ In LaTeX documents, this script replaces the space and/or tab characters with no
    - a closing quote (`''`, `”`, `'`, or `’`) unless it is preceded by the end of a sentence (`.`, `?`, or `!`),
    - the percent sign in LaTeX `\%` (but not the comment `%`),
    - the dollar sign `$` (which means both USD `\$` and the end of inline equation `$...$`),
-   - a closing bracket (`)` or `]`) unless it is preceded by the end of a sentence (`.`, `?`, or `!`),
-   - the closing brace `}` (which means both the brace itself `\}` and the end of `\command{...}`).
+   - a closing bracket (`)`, `]`, or `}`; the latter means both the brace itself `\}` and the end of `\command{...}`) unless it is preceded by the end of a sentence (`.`, `?`, or `!`).
 
 5. For each reference command (`\ref`, `\pageref`, `\eqref`, and `\cite`), the allowed symbols that immediately follow it are specified in `refs` dictionary (lines 26–30). Generally, it is only `{` but both `{` and `[` are allowed after `\cite`.
 

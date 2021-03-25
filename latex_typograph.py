@@ -31,12 +31,11 @@ def typograph(text: str):
     # Symbols before a whitespace character and a reference command:
     pre_ref = (r"(?<!\\[a-zA-Z]*)[a-zA-Z]|"  # Latin letter (but not \command)
                r"[0-9]|"                     # digit
-               r"(?<!\.|\?|\!)(?:''|”)|"     # '' ” not preceded by .?!
-               r"(?<!\.|\?|\!|')(?:'|’)|"    # ' ’  not preceded by .?!'
-               r"\\%|"                       # \%   but not comment %
-               r"\$|"                        # $    USD and end of $...$
-               r"(?<!\.|\?|\!)(?:\)|\])|"    # ) ]  not preceded by .?!
-               r"\}"                         # }    i.e., \}, {...}
+               r"(?<!\.|\?|\!)(?:''|”)|"     # '' ”   not preceded by .?!
+               r"(?<!\.|\?|\!|')(?:'|’)|"    # ' ’    not preceded by .?!'
+               r"\\%|"                       # \%     but not comment %
+               r"\$|"                        # $      USD and after $...$
+               r"(?<!\.|\?|\!)(?:\)|\]|\})"  # ) ] }  not preceded by .?!
                )
     # Symbols immediately before a reference shorthand:
     pre_short = (r" |\t|^|\n|"  # space, \t; file or newline beginning
